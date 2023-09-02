@@ -1,2 +1,3 @@
-# sicat-gio
-THIS IS MY PORTFOLIO
+# Portfolio
+
+This is my portfolio for my undergrad projects and achievements.
