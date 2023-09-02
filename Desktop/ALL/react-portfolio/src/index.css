@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    background-color:#111827;
+    font-family: Kanit, "san-serif";
+   ;
+}
+/* Container for navigation icons */
+/* Apply scroll snapping to each section or component */
+.scroll-snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+@layer components{
+    .sidebar-icon{
+        @apply relative flex items-center justify-center
+        hover:bg-gradient-to-r from-blue-500 to-[#93C5FD] p-2.5 rounded-3xl
+        hover:rounded-xl
+        transition-all duration-300 ease-linear;
+    }
+}
