@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/sicat-gio/static/css/main.77fab734.css",
-    "main.js": "/sicat-gio/static/js/main.b78bb85c.js",
+    "main.css": "/sicat-gio/static/css/main.94b454b6.css",
+    "main.js": "/sicat-gio/static/js/main.d4998479.js",
     "index.html": "/sicat-gio/index.html",
-    "main.77fab734.css.map": "/sicat-gio/static/css/main.77fab734.css.map",
-    "main.b78bb85c.js.map": "/sicat-gio/static/js/main.b78bb85c.js.map"
+    "main.94b454b6.css.map": "/sicat-gio/static/css/main.94b454b6.css.map",
+    "main.d4998479.js.map": "/sicat-gio/static/js/main.d4998479.js.map"
   },
   "entrypoints": [
-    "static/css/main.77fab734.css",
-    "static/js/main.b78bb85c.js"
+    "static/css/main.94b454b6.css",
+    "static/js/main.d4998479.js"
   ]
 }
