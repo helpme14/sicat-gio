@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sicat-gio/static/css/main.ed2b34e2.css",
+    "main.js": "/sicat-gio/static/js/main.d492f451.js",
+    "index.html": "/sicat-gio/index.html",
+    "main.ed2b34e2.css.map": "/sicat-gio/static/css/main.ed2b34e2.css.map",
+    "main.d492f451.js.map": "/sicat-gio/static/js/main.d492f451.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed2b34e2.css",
+    "static/js/main.d492f451.js"
+  ]
+}
