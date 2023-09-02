@@ -66,13 +66,13 @@ const Certificates = () => {
           <p id="cert" className='inline text-4xl font-bold border-b-4 border-[#FFA500] uppercase md:ml-24 sm:ml-0'>Certificates</p>
         </div>
         
-        <div className='grid gap-6 px-4 sm:px-6 md:px-8 lg:px-20  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+        <div className='grid gap-6 px-4 sm:px-6 md:px-8 lg:px-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           
           {portfolios.map(({ id, src, desc }) => (
             <div key={id} className='rounded-lg shadow-md shadow-[#FFA500]'>
               <img src={src} alt='' className='w-full h-[250px] object-cover duration-200 rounded-md hover:scale-105' />
               <div className='text-center'>
-                <p className='uppercase font-kanit pt-2 mb-0'>{desc}</p>
+                <p className='pt-2 mb-0 uppercase font-kanit'>{desc}</p>
               </div>
             </div>
           ))}

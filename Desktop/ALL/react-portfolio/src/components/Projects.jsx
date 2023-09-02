@@ -34,23 +34,25 @@ const Projects = () => {
   return (
 
     <Element id="projectsPage" name='projectsPage' className=''>
-      <div className='h-full flex'>
-        <div className="grid sm:grid-rows-1 mx-4 md:grid-rows-2 lg:grid-rows-3 h-full md:mx-20 lg:mx-24 lg:mt-10 ">
+      <div className='flex h-full '>
+        <div className="grid w-screen h-full mx-4 sm:grid-rows-1 md:grid-rows-2 lg:grid-rows-3 md:mx-20 lg:mx-24 lg:mt-10 ">
 
 
-          <div name="section1" className='grid grid-cols-1 my-3 lg:grid-cols-2 shadow-md shadow-[#FFA500] rounded-lg'>
-              <div name="projectDescription 1" className='text-white border border-white grid grid-rows-2 lg:grid-rows-4 
+          <div name="section1" className='grid  grid-cols-1 my-3 lg:grid-cols-2 shadow-md shadow-[#FFA500] rounded-lg'>
+            
+              <div name="projectDescription 1" className=' text-white  grid grid-cols-1 grid-rows-2 lg:grid-rows-4 
               bg-gradient-to-t from-[#111827] via-slate-800 to-gray-700 '>
-                  <div className=' row-span-3  '>
+
+                  <div className='grid row-span-3 '>
                     <h1 className='text-center my-2 uppercase font-bold text-[#FFA500] lg:text-3xl'>E-Chequer Website </h1>
-                      <p className='mx-10 my-auto lg:text-xl'>The E-Chequer Website, a cornerstone of our thesis project, empowers educators with key features. 
+                      <p className='mx-10 text-sm lg:text-xl'>The E-Chequer Website, a cornerstone of our thesis project, empowers educators with key features. 
                                                 It enables seamless access to student scores, facilitates answer sheet generation, and sets answer keys 
                                                 for automation. Furthermore, it streamlines score report creation through Excel exports, 
                                                 enhancing student data management for teachers.
                       </p>
                   </div>
 
-                  <div className=' row-span-1 my-auto mx-10 flex items-center '>
+                  <div className='flex items-center row-span-1 mx-10 my-auto '>
                       <h3 className=''>Stack used: </h3>
                       <AiOutlineHtml5  size='30' className='mx-1 text-[#e34c26] ' />
                       <TbBrandCss3  size='30' className='mx-1 text-[#264de4]'/>
@@ -61,8 +63,8 @@ const Projects = () => {
                   </div>
               </div>
 
-              <div className=' border border-white bg-slate-800 flex justify-center '>
-                  <div className='max-w-lg  flex items-center '>
+              <div className='flex justify-center border border-white bg-slate-800'>
+                  <div className='flex items-center max-w-lg '>
                     <Carousel>
                     {slide1.map((s)=>(
                       <img src={s} alt="" className='rounded-3xl'/>
@@ -77,7 +79,7 @@ const Projects = () => {
 
 
           <div name="section2" className=' grid grid-cols-1 my-3 lg:grid-cols-2 shadow-md shadow-[#FFA500]  rounded-lg'>
-              <div name="projectDescription 2" className='text-white border border-white grid grid-rows-2 lg:grid-rows-4 bg-slate-600 
+              <div name="projectDescription 2" className=' grid-cols-1 text-white border border-white grid grid-rows-2 lg:grid-rows-4 bg-slate-600 
               bg-gradient-to-t from-[#111827] via-slate-800 to-gray-700  '>
                 <div className='row-span-3'>
                   <h1 className='text-center my-2 uppercase font-bold text-[#FFA500] lg:text-3xl'>ChikChat: Real-time Local Web Chat  </h1>
@@ -89,7 +91,7 @@ const Projects = () => {
                     </p>
                 </div>
 
-                <div className='row-span-1 my-auto mx-10 flex items-center '>
+                <div className='flex items-center row-span-1 mx-10 my-auto '>
                     <h3 className=''>Stack used:</h3>
                     <AiOutlineHtml5  size='30' className='mx-1 text-[#e34c26]'/>
                     <TbBrandCss3  size='30' className='mx-1 text-[#264de4]'/>
@@ -99,8 +101,8 @@ const Projects = () => {
 
                 </div>
               </div>
-              <div className=' border border-white bg-slate-800 flex justify-center '>
-                  <div className='max-w-lg   flex items-center  '>
+              <div className='flex justify-center border border-white bg-slate-800'>
+                  <div className='flex items-center max-w-lg '>
                     <Carousel>
                     {slide2.map((s)=>(
                       <img src={s} alt="" className='rounded-3xl '/>
@@ -113,15 +115,16 @@ const Projects = () => {
 
         
           <div name="section3" className=' grid grid-cols-1 my-3 lg:grid-cols-2 shadow-md shadow-[#FFA500]  rounded-lg'>
-              <div name="projectDescription 3" className='text-white border border-white grid grid-rows-2 lg:grid-rows-4 bg-slate-600 
+              <div name="projectDescription 3" className='grid-cols-1 text-white border border-white grid grid-rows-2 lg:grid-rows-4 bg-slate-600 
               bg-gradient-to-t from-[#111827] via-slate-800 to-gray-700  '>
-                <div className=' row-span-3'>
+                <div className='row-span-3 '>
                   <h1 className='text-center my-2 uppercase font-bold text-[#FFA500] lg:text-3xl'>POMODORO TECHNIQUE TIMER</h1>
                   <p className='mx-10 my-5 lg:text-xl'>Crafted with ReactJS and Tailwind CSS, my Pomodoro Technique Timer is a simple yet effective digital tool. Inspired by the Pomodoro Technique, it helps users boost productivity by breaking work into intervals. With a seamless user experience, this timer fosters focused work sessions followed by short breaks. As a personal project and first web app for reactjs, I've hosted it on GitHub, showcasing my passion in coding  and commitment to creating practical solutions for enhanced time management.</p>
-                  <p className='mx-10'> <a href='https://helpme14.github.io/pomodoro-app/' target="_blank" rel="noopener noreferrer">https://helpme14.github.io/pomodoro-app/</a></p>
+                  <p className='mx-10 my-2'> <a href='https://helpme14.github.io/pomodoro-app/' target="_blank" rel="noopener noreferrer"
+                  className='flex  justify-center text-[.9rem] lg:text-xl'>https://helpme14.github.io/pomodoro-app/</a></p>
                 </div>
 
-                <div className='row-span-1 my-auto mx-10 flex items-center '>
+                <div className='flex items-center row-span-1 mx-10 my-auto '>
                     <h3 className=''>Stack used:</h3>
                     <AiOutlineHtml5  size='30' className='mx-1 text-[#e34c26]'/>
                     <TbBrandCss3  size='30' className='mx-1 text-[#264de4]'/>
@@ -131,8 +134,8 @@ const Projects = () => {
 
                 </div>
               </div>
-              <div className=' border border-white bg-slate-800 flex justify-center '>
-                  <div className='max-w-lg   flex items-center  '>
+              <div className='flex justify-center border border-white bg-slate-800'>
+                  <div className='flex items-center max-w-lg '>
                     <Carousel>
                     {slide3.map((s)=>(
                       <img src={s} alt="" className='rounded-3xl'/>
@@ -146,15 +149,16 @@ const Projects = () => {
 
 
           <div name="section4" className=' grid grid-cols-1 my-3 lg:grid-cols-2 shadow-md shadow-[#FFA500]  rounded-lg'>
-              <div name="projectDescription 4" className='text-white border border-white grid grid-rows-2 lg:grid-rows-4 bg-slate-600 
+              <div name="projectDescription 4" className='grid-cols-1 text-white border border-white grid grid-rows-2 lg:grid-rows-4 bg-slate-600 
               bg-gradient-to-t from-[#111827] via-slate-800 to-gray-700  '>
-                <div className=' row-span-3'>
+                <div className='row-span-3 '>
                   <h1 className='text-center my-2 uppercase font-bold text-[#FFA500] lg:text-3xl'>Tic Tac Toe</h1>
                   <p className='mx-10 my-5 lg:text-xl'>Discover my rendition of the classic game with the Tic Tac Toe web application. Developed using ReactJS and styled with Tailwind CSS, this digital adaptation offers a nostalgic yet modern experience. Players can engage in strategic matches through an intuitive interface. As a personal project, I've brought this game to life and hosted it on GitHub, showcasing my ability to create enjoyable and interactive web-based applications.</p>
-                  <p className='mx-10 mb-1'> <a href='https://helpme14.github.io/tic-tac-toe-reactjs/' target="_blank" rel="noopener noreferrer">https://helpme14.github.io/tic-tac-toe-reactjs/</a></p>
+                  <p className='mx-10 my-2'> <a className='flex  justify-center text-[.9rem] lg:text-xl'
+                   href='https://helpme14.github.io/tic-tac-toe-reactjs/' target="_blank" rel="noopener noreferrer">https://helpme14.github.io/tic-tac-toe-reactjs/</a></p>
                 </div>
 
-                <div className='row-span-1 my-auto mx-10 flex items-center '>
+                <div className='flex items-center row-span-1 mx-10 my-auto '>
                     <h3 className=''>Stack used:</h3>
                     <AiOutlineHtml5  size='30' className='mx-1 text-[#e34c26]'/>
                     <TbBrandCss3  size='30' className='mx-1 text-[#264de4]'/>
@@ -164,11 +168,11 @@ const Projects = () => {
 
                 </div>
               </div>
-              <div className=' border border-white bg-slate-800 flex justify-center '>
-                  <div className='max-w-lg flex items-center  '>
+              <div className='flex justify-center border border-white bg-slate-800'>
+                  <div className='flex items-center max-w-lg '>
                     <Carousel>
                     {slide4.map((s)=>(
-                      <img src={s} alt="" className='rounded-3xl  '/>
+                      <img src={s} alt="" className='rounded-3xl '/>
                     ))}
                     </Carousel>
                    
