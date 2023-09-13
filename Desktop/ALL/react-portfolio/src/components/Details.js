@@ -31,7 +31,7 @@ const data = [
     ]
     },
     {
-      label: "HTML & CSS",
+      label: "HTML/CSS",
       value: "htmlcss",
       desc: `HTML provides the structure, while CSS adds style and design. Together, they form the foundation of every visually appealing webpage on the internet.`,
       imgSrc:
@@ -58,20 +58,20 @@ const data = [
         process.env.PUBLIC_URL +"/logo.png", 
     ]
     },
-    {
-      label: "Image Processing",
-      value: "imgproc",
-      desc: `We're not always in the position that we want to be at.
-      We're constantly growing. We're constantly making mistakes. We're
-      constantly trying to express ourselves and actualize our dreams.`,
-      imgSrc:[
-        process.env.PUBLIC_URL +"/logo.png", 
-        process.env.PUBLIC_URL +"/logo.png", 
-        process.env.PUBLIC_URL +"/logo.png", 
-        process.env.PUBLIC_URL +"/logo.png", 
-        process.env.PUBLIC_URL +"/logo.png", 
-        process.env.PUBLIC_URL +"/logo.png", 
-    ]
-    },
+    // {
+    //   label: "Image Processing",
+    //   value: "imgproc",
+    //   desc: `We're not always in the position that we want to be at.
+    //   We're constantly growing. We're constantly making mistakes. We're
+    //   constantly trying to express ourselves and actualize our dreams.`,
+    //   imgSrc:[
+    //     process.env.PUBLIC_URL +"/logo.png", 
+    //     process.env.PUBLIC_URL +"/logo.png", 
+    //     process.env.PUBLIC_URL +"/logo.png", 
+    //     process.env.PUBLIC_URL +"/logo.png", 
+    //     process.env.PUBLIC_URL +"/logo.png", 
+    //     process.env.PUBLIC_URL +"/logo.png", 
+    // ]
+    // },
   ];
   export default data;

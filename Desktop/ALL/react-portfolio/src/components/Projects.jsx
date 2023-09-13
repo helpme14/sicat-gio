@@ -180,16 +180,16 @@ const Projects = () => {
 
         
         <span className='underline flex  text-orange-500 my-10 mx-6 md:mx-24 lg:mx-36 justify-center '>
-          <h1 className=' font-bold text-5xl lg:text-4xl '>PROJECTS</h1>
+          <h1 className=' font-bold text-4xl lg:text-4xl '>PROJECTS</h1>
         </span>
 
 
-          <Tabs value={activeTab} className=" mx-6 md:mx-24 lg:mx-36 mb-10 z-[998] custom-tabs ">
+          <Tabs value={activeTab} className=" mx-2 md:mx-24 lg:mx-36 mb-10 z-[998] custom-tabs ">
           <TabsHeader className='flex items-center rounded-b-none '>
             {Details.map(({ label, value }) => (
               <Tab key={value} value={value} 
               onClick={() => setActiveTab(value)} className={`${activeTab === value ? "text-orange-500 font-bold " :"text-black "} ` } >
-                <span className='xs:text-md xs:font-bold text-lg font-kanit font-normal flex items-center'>{label}</span>
+                <span className='flex font-kanit text-sm  font-bold md:text-lg  '>{label}</span>
               </Tab>
             ))}
           </TabsHeader>
@@ -197,7 +197,7 @@ const Projects = () => {
           <TabsBody className=''> 
           {Details.map(({ value, desc, imgSrc }) => (
               <TabPanel key={value} value={value} className='text-black  text-md bg-gray-400 rounded-b-2xl font-kanit font-normal '>
-                <div className=' '>
+                <div className=' text-xs md:text-lg'>
                   {desc}
                   
                 </div>

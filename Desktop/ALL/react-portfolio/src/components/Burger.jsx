@@ -31,6 +31,10 @@ const navLinks = [
       ids:'aboutMe'
     },
   ]
+
+
+  
+
   const handleIconClick = (index) => {
     setActiveIcon(index);
     console.log(activeIcon); // Added this line to use activeIcon
@@ -62,10 +66,12 @@ const navLinks = [
    
       <div className={`absolute w-2/3 h-screen bg-gradient-to-b from-[#111827] via-slate-600 to-gray-800 top-0 left-0 duration-200   
       shadow-md shadow-black   md:hidden  ${isChecked ? "left-0":"left-[-100%]"} ` }>
-        <ul className='flex gap-10 justify-center flex-col px-7 py-2  text-3xl uppercase  h-full text-right'>
+        <ul className='flex gap-10 justify-center flex-col px-7 py-2  text-2xl uppercase  h-full text-right'>
           {navLinks.map((descData,index)=>(   
              <Link key={index} to={descData.ids} className='rounded-[50px]' spy={true} smooth={true} offset={-100} duration={700}>
-            <li key={index} onClick={() => handleIconClick(index)} className=' hover:text-[#FFA500] relative px-2 py-1 border-b-2 hover:border-[#FFA500]'>{descData.desc}</li>
+            <li key={index} onClick={() => handleIconClick(index)} className=' hover:text-[#FFA500] relative px-2 py-1 border-b-2 hover:border-[#FFA500]'>
+              {descData.desc}
+              </li>
             </Link> 
           ))}
         </ul>
