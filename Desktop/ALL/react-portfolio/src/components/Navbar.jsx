@@ -6,6 +6,9 @@ import{LuContact} from 'react-icons/lu'
 import {Link } from 'react-scroll'
 import { useState, useEffect, useMemo  } from 'react';
 import Scrollspy from 'react-scrollspy';
+import Hamburger from './Burger';
+import './Burger.css';
+
 
 
 function Sidebar() {
@@ -19,9 +22,30 @@ function Sidebar() {
   ],
   []);
   
+  const navLinks = [
+    {
+      desc: "Home",
+      ids:'homePage'
+    },
+    {
+      desc: "Certificates",
+      ids:'cert'
+    },
+    {
+      desc: "Projects",
+      ids:'projectsPage'
+    },
+    {
+      desc: "About me",
+      ids:'aboutMe'
+    },
+  ]
+
+
 
   const handleIconClick = (index) => {
     setActiveIcon(index);
+    console.log(activeIcon); // Added this line to use activeIcon
   };
 
   useEffect(() => {
@@ -48,20 +72,42 @@ function Sidebar() {
   
   
   return (
-    
-    <div  className=' flex justify-between items-center h-24  text-white max-w-[1140px] mx-auto px-4  xs:h-[4em] '>        
+    <header>
+    <div  className=' flex fixed justify-between items-center h-24  text-white w-screen  xs:h-[4em] 
+     bg-[#111827]  z-[999] border-b-1 border-[#FFA500] md:shadow-md md:shadow-black shadow-md shadow-[#FFA500] '>        
+      
+        <div className=' hidden md:flex md:ml-[4ch] lg:ml-[8ch] gap-10 items-center'>
+        
+        <img src={process.env.PUBLIC_URL +"/logo.png"} alt="Company Logo" className="w-10 h-10 md:w-10 md:h-10 flex " />
+        <Scrollspy items={icons.map((descData) => descData.ids )}  currentClassName="active" className=" flex flex-col">
+       
+             
+             
+             <ul className='flex gap-4'>
+              {navLinks.map((descData,index)=>(
+                 <Link key={index} to={descData.ids} className='rounded-[50px]' spy={true} smooth={true} offset={-100} duration={700}>
 
-        <div className='ml-auto'>
-             <button className=" bg-transparent hover:bg-gradient-to-r from-blue-500 to-[#93C5FD] text-white font-semibold
-              hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent  whitespace-nowrap rounded-3xl hover:rounded-xl
-             transition-all duration-300 ease-linear">Contact me!</button>
+                <li key={index} onClick={() => handleIconClick(index)} className={`${activeIcon === index ? 
+                '' : ''} nav-link relative px-2 py-1` } >
+                  {descData.desc}
+                </li>
+                </Link>
+                ))}
+             </ul>
+             </Scrollspy>
         </div>
+        <div className="md:hidden ml-6">
+            <Hamburger initialValue={false} />
+
+            
+        </div>
+        
     
 
     
-    <div className='fixed left-12 top-[19em] max-h-[500px] h-[280px] w-[45px] backdrop-blur-lg bg-gray-800 bg-opacity-20 rounded-[50px] border border-white 
-     hidden md:block z-30'>
-
+    {/*<div className='fixed translate-x-[-50%] translate-y-[-50%] left-[5%] top-[50%] max-h-[500px] h-[280px] w-[45px] backdrop-blur-lg bg-gray-800 bg-opacity-20 rounded-[50px] border border-white 
+      z-30 hidden'>
+hidden md:block 
 
 <Scrollspy items={icons.map((iconData) => iconData.ids)} currentClassName="active" className=" flex flex-col h-full">
       <ul className=" flex flex-col justify-center items-center h-full space-y-6 ">
@@ -93,20 +139,19 @@ function Sidebar() {
       </ul>
       </Scrollspy>
       
-    </div>
+              </div> */}
     
-    <div className='fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-gray-100 bg-opacity-20 border-t rounded-[50px] max-h-[80px] h-[40px] w-[245px]  z-50 md:hidden'>
+    {/*<div className='fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-gray-100 bg-opacity-20 border-t rounded-[50px] max-h-[80px] h-[55px] w-[245px]  z-50 md:hidden'>
     <div className='flex flex-row justify-center items-center h-full space-x-6 '>
 
         {icons.map((iconData, index) => (
            <Link key={index} to={iconData.ids} className='rounded-[50px]' spy={true} smooth={true} offset={10} duration={700}>
             <div
                 key={index}
-                className={`${activeIcon === index ? 'bg-gradient-to-r from-blue-500 to-[#93C5FD] text-white' : ''}
+                className={`${activeIcon === index ? ' text-white' : ''}
                 relative flex items-center justify-center
-                hover:bg-gradient-to-r from-blue-500 to-[#93C5FD] p-2 rounded-3xl
-                hover:rounded-xl
-                transition-all duration-300 ease-linear` } 
+               
+                ` } 
                 onClick={() => handleIconClick(index)}>
             
                 {React.cloneElement(iconData.icon, {
@@ -116,53 +161,15 @@ function Sidebar() {
             </Link>
         ))}
     </div>
-</div>
+</div>*/}
 
 
 
     
   </div>
+  </header>
 
   )
 }
-
-
-// const Navbar = () => {
-//   return (
-//     <div className='flex justify-between items-center h-24 text-white max-w-[1040px] mx-auto px-4 '>
-            
-//             <h1 className='w-full text-4xl  text-[#FFA500] flex items-center font-kanit'><FaLessThan/>GI/O<FaGreaterThan/></h1> 
-            
-//             <ul className='flex text-[#0f0f0f] hidden '>
-//                 <li className="p-4">Home</li>
-//                 <li className="p-4">Certificates</li>
-//                 <li className="p-4">Projects</li>
-//                 <li className="p-4">Contact</li>
-//             </ul>
-
-//         <div >
-//             <button className=" bg-transparent hover:bg-gradient-to-r from-blue-500 to-[#93C5FD] text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent  whitespace-nowrap rounded-3xl hover:rounded-xl
-//             transition-all duration-300 ease-linear">Hire me!</button>
-//         </div>
-
-//         <div className='fixed left-12 top-[15em] max-h-[500px] h-[320px] w-[50px] backdrop-blur-lg bg-gray-100 bg-opacity-20 rounded-[50px]'>
-
-//         <ul className="flex flex-col justify-center items-center h-full space-y-6">
-//             <li><SideBarIcon icon={<AiOutlineHome size={20} />} /></li>
-//             <li><SideBarIcon icon={<PiCertificate size={20}/>}/></li>
-//             <li><SideBarIcon icon={<BsCodeSquare size={20}/>}/></li>
-//             <li><SideBarIcon icon={<LuContact size={20}/>}/></li>
-//         </ul>
-//     </div>
-//     </div>
-//   )
-// }
-
-// export const SideBarIcon = ({icon}) => (
-//     <div className="sidebar-icon">
-//         {icon}
-//     </div>
-// )
-
 
 export default Sidebar

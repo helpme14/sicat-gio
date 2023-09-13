@@ -3,3 +3,44 @@
   box-sizing: border-box;
   
 }
+
+
+.custom-tabs {
+  overflow: visible !important; /* or auto, scroll, etc. */
+}
+.clip-path-triangle {
+  clip-path:polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+
+}
+
+
+.cloud-background {
+  position: relative;
+  width: 100%;
+  height: 150px; /* Adjust the height as needed */
+ /* Set the background color to white */
+  border-radius: 70% 70% 0 0 / 100% 100% 0 0; /* Creates a cloud-like shape */
+  overflow: hidden;
+}
+
+.cloud-background::before,
+.cloud-background::after {
+  content: "";
+  position: absolute;
+  /* Set the background color to white */
+  border-radius: 100%;
+}
+
+.cloud-background::before {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 50px;
+}
+
+.cloud-background::after {
+  width: 120px;
+  height: 120px;
+  top: -40px;
+  right: 20px;
+}

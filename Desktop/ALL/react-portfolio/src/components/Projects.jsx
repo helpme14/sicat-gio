@@ -1,41 +1,35 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {AiOutlineHtml5} from 'react-icons/ai'
 import {TbBrandCss3} from 'react-icons/tb'
 import {FaPhp} from 'react-icons/fa'
 import {RiBootstrapLine} from 'react-icons/ri'
 import {BiLogoFirebase, BiLogoJavascript, BiLogoReact, BiLogoGithub} from 'react-icons/bi'
-import Carousel from './Carousel'
-
+import { Carousel, IconButton } from "@material-tailwind/react";
+import Details from './Details'
 import { Element } from 'react-scroll';
+import {
+  Tabs,
+  TabsHeader,
+  TabsBody,
+  Tab,
+  TabPanel,
+} from "@material-tailwind/react";
+
+import '../App.css';
+
+
 const Projects = () => {
 
-  const slide1 = [
-    "echeq1.png",
-    "echeqlogin.png",
-    "echeqregister.png", 
-  ]
-  const slide2 = [
-    "webchat1.png",
-    "webchat2.png",
-    "webchat3.png", 
-  ]
-  const slide3 = [
-    "pomodoro1.png",
-    "pomodoro2.png",
-    "pomodoro3.png", 
-  ]
-  const slide4 = [
-    "tictactoe1.png",
-    "tictactoe2.png",
-    "tictactoe3.png", 
-  ]
 
+  const [activeTab, setActiveTab] = useState("reactjs");
 
   return (
 
-    <Element id="projectsPage" name='projectsPage' className=''>
-      <div className='flex h-full '>
-        <div className="grid w-screen h-full mx-4 sm:grid-rows-1 md:grid-rows-2 lg:grid-rows-3 md:mx-20 lg:mx-24 lg:mt-10 ">
+    <Element id="projectsPage" name='projectsPage' className='relative '>
+      <div className=' '>
+      <section className='my-5 flex flex-col   w-screen '>
+        
+        {/* <div className="grid w-screen h-full mx-4 sm:grid-rows-1 md:grid-rows-2 lg:grid-rows-3 md:mx-20 lg:mx-24 lg:mt-10 ">
 
 
           <div name="section1" className='grid  grid-cols-1 my-3 lg:grid-cols-2 shadow-md shadow-[#FFA500] rounded-lg'>
@@ -63,7 +57,7 @@ const Projects = () => {
                   </div>
               </div>
 
-              <div className='flex justify-center border border-white bg-slate-800'>
+              <div className='flex justify-center  bg-slate-800'>
                   <div className='flex items-center max-w-lg '>
                     <Carousel>
                     {slide1.map((s)=>(
@@ -79,7 +73,7 @@ const Projects = () => {
 
 
           <div name="section2" className=' grid grid-cols-1 my-3 lg:grid-cols-2 shadow-md shadow-[#FFA500]  rounded-lg'>
-              <div name="projectDescription 2" className=' grid-cols-1 text-white border border-white grid grid-rows-2 lg:grid-rows-4 bg-slate-600 
+              <div name="projectDescription 2" className=' grid-cols-1 text-white  grid grid-rows-2 lg:grid-rows-4 bg-slate-600 
               bg-gradient-to-t from-[#111827] via-slate-800 to-gray-700  '>
                 <div className='row-span-3'>
                   <h1 className='text-center my-2 uppercase font-bold text-[#FFA500] lg:text-3xl'>ChikChat: Real-time Local Web Chat  </h1>
@@ -101,7 +95,7 @@ const Projects = () => {
 
                 </div>
               </div>
-              <div className='flex justify-center border border-white bg-slate-800'>
+              <div className='flex justify-center  bg-slate-800'>
                   <div className='flex items-center max-w-lg '>
                     <Carousel>
                     {slide2.map((s)=>(
@@ -115,17 +109,17 @@ const Projects = () => {
 
         
           <div name="section3" className=' grid grid-cols-1 my-3 lg:grid-cols-2 shadow-md shadow-[#FFA500]  rounded-lg'>
-              <div name="projectDescription 3" className='grid-cols-1 text-white border border-white grid grid-rows-2 lg:grid-rows-4 bg-slate-600 
+              <div name="projectDescription 3" className='grid-cols-1 text-whitegrid grid-rows-2 lg:grid-rows-4 bg-slate-600 
               bg-gradient-to-t from-[#111827] via-slate-800 to-gray-700  '>
                 <div className='row-span-3 '>
                   <h1 className='text-center my-2 uppercase font-bold text-[#FFA500] lg:text-3xl'>POMODORO TECHNIQUE TIMER</h1>
-                  <p className='mx-10 my-5 lg:text-xl'>Crafted with ReactJS and Tailwind CSS, my Pomodoro Technique Timer is a simple yet effective digital tool. Inspired by the Pomodoro Technique, it helps users boost productivity by breaking work into intervals. With a seamless user experience, this timer fosters focused work sessions followed by short breaks. As a personal project and first web app for reactjs, I've hosted it on GitHub, showcasing my passion in coding  and commitment to creating practical solutions for enhanced time management.</p>
+                  <p className='mx-10 my-5 lg:text-xl text-white'>Crafted with ReactJS and Tailwind CSS, my Pomodoro Technique Timer is a simple yet effective digital tool. Inspired by the Pomodoro Technique, it helps users boost productivity by breaking work into intervals. With a seamless user experience, this timer fosters focused work sessions followed by short breaks. As a personal project and first web app for reactjs, I've hosted it on GitHub, showcasing my passion in coding  and commitment to creating practical solutions for enhanced time management.</p>
                   <p className='mx-10 my-2'> <a href='https://helpme14.github.io/pomodoro-app/' target="_blank" rel="noopener noreferrer"
-                  className='flex  justify-center text-[.9rem] lg:text-xl'>https://helpme14.github.io/pomodoro-app/</a></p>
+                  className='flex text-white justify-center text-[.9rem] lg:text-xl'>https://helpme14.github.io/pomodoro-app/</a></p>
                 </div>
 
                 <div className='flex items-center row-span-1 mx-10 my-auto '>
-                    <h3 className=''>Stack used:</h3>
+                    <h3 className='text-white'>Stack used:</h3>
                     <AiOutlineHtml5  size='30' className='mx-1 text-[#e34c26]'/>
                     <TbBrandCss3  size='30' className='mx-1 text-[#264de4]'/>
                     <BiLogoReact  size='30' className='mx-1 text-[#61dafb]'/>
@@ -134,7 +128,7 @@ const Projects = () => {
 
                 </div>
               </div>
-              <div className='flex justify-center border border-white bg-slate-800'>
+              <div className='flex justify-center  bg-slate-800'>
                   <div className='flex items-center max-w-lg '>
                     <Carousel>
                     {slide3.map((s)=>(
@@ -149,7 +143,7 @@ const Projects = () => {
 
 
           <div name="section4" className=' grid grid-cols-1 my-3 lg:grid-cols-2 shadow-md shadow-[#FFA500]  rounded-lg'>
-              <div name="projectDescription 4" className='grid-cols-1 text-white border border-white grid grid-rows-2 lg:grid-rows-4 bg-slate-600 
+              <div name="projectDescription 4" className='grid-cols-1 text-white grid grid-rows-2 lg:grid-rows-4 bg-slate-600 
               bg-gradient-to-t from-[#111827] via-slate-800 to-gray-700  '>
                 <div className='row-span-3 '>
                   <h1 className='text-center my-2 uppercase font-bold text-[#FFA500] lg:text-3xl'>Tic Tac Toe</h1>
@@ -168,7 +162,7 @@ const Projects = () => {
 
                 </div>
               </div>
-              <div className='flex justify-center border border-white bg-slate-800'>
+              <div className='flex justify-center bg-slate-800'>
                   <div className='flex items-center max-w-lg '>
                     <Carousel>
                     {slide4.map((s)=>(
@@ -182,10 +176,59 @@ const Projects = () => {
 
 
 
+        </div> */}
+
+        
+        <span className='underline flex  text-orange-500 my-10 mx-6 md:mx-24 lg:mx-36 justify-center '>
+          <h1 className=' font-bold text-5xl lg:text-4xl '>PROJECTS</h1>
+        </span>
+
+
+          <Tabs value={activeTab} className=" mx-6 md:mx-24 lg:mx-36 mb-10 z-[998] custom-tabs ">
+          <TabsHeader className='flex items-center rounded-b-none '>
+            {Details.map(({ label, value }) => (
+              <Tab key={value} value={value} 
+              onClick={() => setActiveTab(value)} className={`${activeTab === value ? "text-orange-500 font-bold " :"text-black "} ` } >
+                <span className='xs:text-md xs:font-bold text-lg font-kanit font-normal flex items-center'>{label}</span>
+              </Tab>
+            ))}
+          </TabsHeader>
+
+          <TabsBody className=''> 
+          {Details.map(({ value, desc, imgSrc }) => (
+              <TabPanel key={value} value={value} className='text-black  text-md bg-gray-400 rounded-b-2xl font-kanit font-normal '>
+                <div className=' '>
+                  {desc}
+                  
+                </div>
+              </TabPanel>
+            ))}
+
+          </TabsBody>
+          
+          <TabsBody className=''>
+            {Details.map(({ value, desc, imgSrc }) => (
+              <TabPanel key={value} value={value} className='text-white '>
+                <div className='grid grid-cols-2   md:grid-cols-3 lg:grid-cols-4 gap-4  md:mx-0 lg:mx-0 w-full object-cover '>
+                  
+                  {Array.isArray(imgSrc) && imgSrc.map((src, index) => (
+                    <div className='border-b-2 shadow-md shadow-orange-500  rounded-xl  border-orange-500 '>
+                    <img key={index} src={src} alt={`${index}`} className='border-2  w-full h-full rounded-xl hover:scale-105 duration-500' />
+                    </div>
+                  ))}
+                </div>
+              </TabPanel>
+            ))}
+          </TabsBody>
+        </Tabs>
+
+        </section>
         </div>
-    </div>
 
     </Element>
+
+
+
   )
 }
 

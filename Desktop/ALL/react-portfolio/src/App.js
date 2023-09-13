@@ -8,13 +8,9 @@ import ParticlesBack from './components/ParticlesBack';
 import Aboutme from './components/Aboutme';
 import Footer from './components/Footer';
 
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-// import HomePage from './components/Navbar';
-// import CertificatesPage from './components/Certificates';
-
 
 function App() {
+  // const [isChecked, setIsChecked] = useState(false);
   return (
   <div className="overflow-hidden ">
 

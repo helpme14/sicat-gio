@@ -24,3 +24,34 @@ body{
         transition-all duration-300 ease-linear;
     }
 }
+.nav-link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFA500; /* Your desired underline color */
+    transition: width 0.4s ease, transform 0.3s ease;
+    transform-origin: bottom left;
+    box-shadow: 0px 4px 8px rgba(255, 165, 0, 0.5);
+    
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    transform: scaleX(1); /* Scale the underline on hover */
+    transform-origin: bottom left;
+}
+.content.blurred {
+    filter: blur(5px); /* Adjust the blur amount as needed */
+  }
+  .bg-radial-gradient {
+    background-image: radial-gradient(circle, #111827, transparent);
+  }
+  /* Change the color of the arrows */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    color: red; /* Change to your desired color */
+  }
+  

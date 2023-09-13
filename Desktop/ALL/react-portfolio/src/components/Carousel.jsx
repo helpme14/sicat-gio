@@ -19,7 +19,7 @@ export default function Carousel({children:slide1}){
             <button onClick={prev} className='p-1 rounded-full shadow  bg-gradient-to-r from-[#111827]  to-gray-700 hover:scale-105 '>
                 <BiChevronLeft size={40} color='#FFA500' className=''/>
             </button>
-            <button onClick={next} className='p-1 rounded-full shadow  bg-gradient-to-l from-[#111827]  to-gray-700 hover:scale-105'>
+            <button onClick={next} className='p-1 rounded-full shadow  bg-gradient-to-l from-[#111827]  to-gray-700 hover:scale-105 mr-5'>
                 <BiChevronRight  size={40} color='#FFA500'/>
             </button>
             </div>
